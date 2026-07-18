@@ -6,15 +6,7 @@ GigRadar is a freelance job aggregator and application tracker API built with Fa
 - **User Authentication** — Register/login with JWT access tokens, OAuth2 password flow, bcrypt password hashing
 - **Gig Management** — Full CRUD for job listings with nested client/tag data
 - **Application Tracking** — Track application status per gig (applied → interview → rejected/hired)
-- **Search & Filtering** — Query gigs by keyword, tag, or status with pagination
-- **File Uploads** — Resume/portfolio upload tied to user profile
-- **Caching** — In-memory/Redis caching for frequently searched gigs
-- **Rate Limiting** — Protects scrape/third-party endpoints from abuse
-- **Third-Party Integration** — Pulls live listings from an external job API
-- **Robust Error Handling** — Centralized exception handlers for consistent API responses
-- **Request Logging** — Middleware logs request timing and metadata
-- **Automated Tests** — Pytest coverage for auth and CRUD flows
-
+- **Robust Error Handling** — Centralized exception handlers for consistent API response
 ---
 
 ## Tech Stack
@@ -27,7 +19,7 @@ GigRadar is a freelance job aggregator and application tracker API built with Fa
 | Auth           | JWT (python-jose), OAuth2, Passlib   |
 | Validation     | Pydantic v2                          |
 | Testing        | Pytest, httpx                        |
-| Deployment     | Render                               |
+                              
 
 ---
 
@@ -53,9 +45,7 @@ gigradar/
 │   ├── auth/                    # JWT + password hashing utilities
 │   │   ├── jwt_handler.py
 │   │   └── dependencies.py
-│   └── core/
-│       ├── config.py           # Env var settings
-│       └── cache.py            # Caching logic
+│              
 ├── tests/
 │   ├── test_auth.py
 │   └── test_gigs.py
